@@ -2,6 +2,15 @@
     padding-top: 50px;
     padding-bottom: 20px;
 }
+.navbar-inverse {
+    background-color:cornflowerblue;
+}
+.navbar-inverse .navbar-brand {
+    color: white;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: white;
+}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {

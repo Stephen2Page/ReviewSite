@@ -1,66 +1,41 @@
 ﻿@model ReviewSite.Models.Reviews
-
+@*  assign review title to page title  *@
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = @Html.DisplayFor(model => model.Title);
 }
 
-<h2>Full Review</h2>
+<h2>@ViewBag.Title</h2>
 
 <div>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
 
-        <dd>
-            <h4>@Html.DisplayFor(model => model.Title)</h4>
-        </dd>
+    <p>
+        <strong>@Html.DisplayNameFor(model => model.Rating):</strong> @Html.DisplayFor(model => model.Rating)
+        <strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)
+    </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </dt>
+    @*@foreach (var item in 4)
+        {
+        <p>* </p>
+        }*@
+    <p>
+        <strong>@Html.DisplayNameFor(model => model.VisitDate):</strong>
+        @Html.DisplayFor(model => model.VisitDate)
+    </p>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Name)
-        </dd>
+    <p>
+        <strong>@Html.DisplayNameFor(model => model.Content):</strong>
+        @Html.DisplayFor(model => model.Content)
+    </p>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
+    <p>
+        <strong>@Html.DisplayNameFor(model => model.ReviewDate):</strong>
+        @Html.DisplayFor(model => model.ReviewDate)
+    </p>
+    <br/>
 
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.VisitDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.VisitDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
-
-    </dl>
-</div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Delete", "Delete", new { id=Model.ID }) |
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>

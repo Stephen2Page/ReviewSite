@@ -15,6 +15,7 @@ namespace ReviewSite.Models
         public int Rating { get; set; }
         [Display(Name = "Date of Visit")]
         public DateTime VisitDate { get; set; }
+        [Display(Name = "Comments")]
         public string Content { get; set; }
         [Display(Name = "Date of Review")]
         public DateTime ReviewDate { get; set; }

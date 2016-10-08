@@ -31,8 +31,22 @@ select,
 textarea {
     max-width: 400px;
 }
+
 .date {
     float: right;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+content-summary {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
 }
 .detail {
     max-width: 600px;

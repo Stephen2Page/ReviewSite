@@ -15,10 +15,14 @@
         <div class="col-xs-6 col-sm-4 thumbnail">
             <div class="caption">
 
-                <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
-                <h4>@Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(modelItem => item.Category.Name)</h4>
+                <h3 class="text-nowrap">@Html.DisplayFor(modelItem => item.Title)</h3>
+                <h5>@Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(modelItem => item.Category.Name)</h5>
                 <p><strong>Rating:</strong>  @Html.DisplayFor(modelItem => item.Rating) <span class="date"><strong>Date:</strong>  @Html.DisplayFor(modelItem => item.VisitDate)</span></p>
-
+                @* Attempting to show summary of comments. *@
+                @*<div class="content-summary">
+                    <strong>@Html.DisplayNameFor(model => model.Content):</strong>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </div>*@
                 <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })</p>
             </div>
         </div>

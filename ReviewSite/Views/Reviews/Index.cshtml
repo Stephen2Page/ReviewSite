@@ -17,9 +17,9 @@
 
                 <h2>@Html.DisplayFor(modelItem => item.Title)</h2>
                 <h4>@Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(modelItem => item.Category.Name)</h4>
-                <p>Rating:  @Html.DisplayFor(modelItem => item.Rating) <span class="date">Date:  @Html.DisplayFor(modelItem => item.VisitDate)</span></p>
+                <p><strong>Rating:</strong>  @Html.DisplayFor(modelItem => item.Rating) <span class="date"><strong>Date:</strong>  @Html.DisplayFor(modelItem => item.VisitDate)</span></p>
 
-                <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary" })</p>
+                <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary btn-sm" })</p>
             </div>
         </div>
     }

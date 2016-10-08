@@ -34,3 +34,13 @@ textarea {
 .date {
     float: right;
 }
+.detail {
+    max-width: 600px;
+    padding: 0em 0em 0em 4em;
+}
+.delete {
+    max-width: 600px;
+}
+.delete-alert {
+    color: red;
+}

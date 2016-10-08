@@ -6,12 +6,12 @@
 
 <h2>@ViewBag.Title</h2>
 
-<div>
+<div class="detail">
     <hr />
 
     <p>
         <strong>@Html.DisplayNameFor(model => model.Rating):</strong> @Html.DisplayFor(model => model.Rating)
-        <strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)
+        <span class="date"><strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)</span>
     </p>
 
     @*@foreach (var item in 4)
@@ -23,7 +23,7 @@
         @Html.DisplayFor(model => model.VisitDate)
     </p>
 
-    <p>
+    <p class="content-detail">
         <strong>@Html.DisplayNameFor(model => model.Content):</strong>
         @Html.DisplayFor(model => model.Content)
     </p>
@@ -32,10 +32,11 @@
         <strong>@Html.DisplayNameFor(model => model.ReviewDate):</strong>
         @Html.DisplayFor(model => model.ReviewDate)
     </p>
+    </div>
     <br/>
 
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Delete", "Delete", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }, new { @class = "btn btn-primary btn-sm" })
+    @Html.ActionLink("Delete", "Delete", new { id = Model.ID }, new { @class = "btn btn-primary btn-sm" })
+    @Html.ActionLink("Back to List", "Index", "Home", new { @class = "btn btn-primary btn-sm" })
 </p>

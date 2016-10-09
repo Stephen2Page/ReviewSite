@@ -14,10 +14,13 @@
         <span class="date"><strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)</span>
     </p>
 
-    @*@foreach (var item in 4)
+    @* Attempting to print * for rating points
+        @{
+        for (int i = 1; i <= Model.Rating; i++)
         {
         <p>* </p>
-        }*@
+        }
+    }*@
     <p>
         <strong>@Html.DisplayNameFor(model => model.VisitDate):</strong>
         @Html.DisplayFor(model => model.VisitDate)

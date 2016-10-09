@@ -31,28 +31,23 @@ select,
 textarea {
     max-width: 400px;
 }
-
+/*Below are my formating*/
 .date {
     float: right;
 }
-
-.text-nowrap {
+.caption h3 {
+    margin-top: 10px;
+}
+.text-nowrap { /* for review list prevents Title and Content from wrapping and distorting column heights*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-content-summary {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px;
-}
-.detail {
+.detail { /*Constrains width of content*/
     max-width: 600px;
     padding: 0em 0em 0em 4em;
 }
-.delete {
+.delete { /*Constrains width of content*/
     max-width: 600px;
 }
 .delete-alert {

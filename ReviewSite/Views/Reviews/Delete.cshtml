@@ -14,10 +14,6 @@
         <span class="date"><strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)</span>
     </p>
 
-    @*@foreach (var item in 4)
-        {
-        <p>* </p>
-        }*@
     <p>
         <strong>@Html.DisplayNameFor(model => model.VisitDate):</strong>
         @Html.DisplayFor(model => model.VisitDate)
@@ -34,63 +30,12 @@
     </p>
 
 
-    @*<dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Title)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Title)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rating)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rating)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.VisitDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.VisitDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
-
-    </dl>*@
-
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
-            @Html.ActionLink("Back to List", "Index", "Home", new { @class = "btn btn-primary btn-sm" } )
+            @Html.ActionLink("Cancel", "Details", new { id = Model.ID }, new { @class = "btn btn-primary btn-sm" })
         </div>
     }
 </div>

@@ -48,7 +48,7 @@ textarea {
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.ad-search{
+.ad-search{ /*sets size of ad appearing inline with results*/
     display:block;
     max-height: 191px;
     margin: auto;
@@ -63,7 +63,7 @@ textarea {
 .delete-alert {
     color: red;
 }
-.ad-image{
+.ad-image{ /*Positions ad at bottom of page (called from _layout)*/
     display: block;
     margin: auto;
     /*width: 40%;*/

@@ -11,16 +11,15 @@
 </p>
 <div class="row">
     @foreach (var item in Model)
-    {
-        if (item.ID % 5 == 0)
         {
+            if (item.ID % 5 == 0)  /*Inserts an ad approximately every five reviews*/
+            {
             <div class="col-xs-6 col-sm-4 thumbnail">
                 <div class="caption">
                     <img src = "@Url.Content("~/images/expedia-search.PNG")" alt = "IMAGES" class="ad-search"/>
-                  @*  < img src = "@Url.Content("~/ uploads / FileUpload12011_03_02_11_49_22.jpg")" alt = "IMAGES" />*@
                 </div >
             </div >
-        }
+            }
         <div class="col-xs-6 col-sm-4 thumbnail">
             <div class="caption">
 

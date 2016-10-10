@@ -1,8 +1,25 @@
 ﻿@{
     ViewBag.Title = "About";
 }
-<h2>@ViewBag.Title.</h2>
+<h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<p>Created "~/Views/Shared/DisplayTemplates/DateTime.cshtml" to control formating of DateTime type to only display date.</p>
-<p>On Create view made Comments box expandable.</p>
+<ul>
+    <li>Formated Home screen for better readability</li>
+    <ul>
+        <li>Placed rating and visit date on same line</li>
+        <li>Print * for rating points</li>
+        <li>Class "text-nowrap" prevents Title and Content from wrapping and distorting column heights</li>
+        <li>Moved Details button to right side for better balance</li>
+    </ul>
+    <li>Inserted advertising into pages. One ad in footer on all pages. One ad that inserts before every fifth revew</li>
+    <li>Edited _layout to address overall look and links to direct back to actual Home page rather than ASP.Net</li>
+    <li>Edited ViewBag and heading on screens to customize for this project</li>
+    <li>Created "~/Views/Shared/DisplayTemplates/DateTime.cshtml" to control formating of DateTime type to only display date.</li>
+    <li>On Create and Edit view made Comments box expandable.</li>
+    <li>Edited buttons both for appearance and better workflow between screens</li>
+    <ul>
+        <li>Added Cancel button to Edit and Delete</li>
+        <li>Leaving Edit screen returns user to Details rather than Home</li>
+    </ul>
+</ul>

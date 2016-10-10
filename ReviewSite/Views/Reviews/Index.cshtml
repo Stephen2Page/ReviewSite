@@ -12,29 +12,47 @@
 <div class="row">
     @foreach (var item in Model)
     {
+        if (item.ID % 5 == 0)
+        {
+            <div class="col-xs-6 col-sm-4 thumbnail">
+                <div class="caption">
+                    <img src = "@Url.Content("~/images/expedia-search.PNG")" alt = "IMAGES" class="ad-search"/>
+                  @*  < img src = "@Url.Content("~/ uploads / FileUpload12011_03_02_11_49_22.jpg")" alt = "IMAGES" />*@
+                </div >
+            </div >
+        }
         <div class="col-xs-6 col-sm-4 thumbnail">
             <div class="caption">
 
                 <h3 class="text-nowrap">@Html.DisplayFor(modelItem => item.Title)</h3>
                 <h5>@Html.DisplayNameFor(model => model.Category.Name): @Html.DisplayFor(modelItem => item.Category.Name)</h5>
-                <p><strong>Rating:</strong>  @Html.DisplayFor(modelItem => item.Rating) <span class="date"><strong>Date:</strong>  @Html.DisplayFor(modelItem => item.VisitDate)</span></p>
-                @* Attempting to show summary of comments. *@
+                <p><strong>Rating:</strong>  
+                    @*  Print * for rating points *@
+                    @{
+                        for (int i = 1; i <= item.Rating; i++)
+                        {
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                        }
+                    }
+
+                <span class="date"><strong>Date:</strong>  @Html.DisplayFor(modelItem => item.VisitDate)</span></p>
+                @* Shows summary of comments. *@
                 <div class="text-nowrap">
-                    <strong>@Html.DisplayNameFor(model => model.Content):</strong><br/>
+                    <strong>@Html.DisplayNameFor(model => model.Content):</strong><br />
                     @Html.DisplayFor(modelItem => item.Content)
                 </div>
-                <br/>
-                <p >@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary btn-sm pull-right" })</p>
-                <br/>
+                <br />
+                <p>@Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-primary btn-sm pull-right" })</p>
+                <br />
             </div>
         </div>
     }
 </div>
 
 
-    @*@Html.DisplayFor(modelItem => item.Content)*@
-    @*@Html.DisplayFor(modelItem => item.ReviewDate)*@
+@*@Html.DisplayFor(modelItem => item.Content)*@
+@*@Html.DisplayFor(modelItem => item.ReviewDate)*@
 
-    @*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
-    @*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |*@
-    @*@Html.ActionLink("Delete", "Delete", new { id=item.ID })*@
+@*@Html.ActionLink("Details", "Details", new { id = item.ID })*@
+@*@Html.ActionLink("Edit", "Edit", new { id=item.ID }) |*@
+@*@Html.ActionLink("Delete", "Delete", new { id=item.ID })*@

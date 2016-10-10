@@ -4,6 +4,7 @@
 }
 .navbar-inverse {
     background-color:cornflowerblue;
+    backgr
 }
 .navbar-inverse .navbar-brand {
     color: white;
@@ -35,6 +36,10 @@ textarea {
 .date {
     float: right;
 }
+.thumbnail{
+    border-color: #c3cddd;
+    border: groove, 1px;
+}
 .caption h3 {
     margin-top: 10px;
 }
@@ -42,6 +47,11 @@ textarea {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+.ad-search{
+    display:block;
+    max-height: 191px;
+    margin: auto;
 }
 .detail { /*Constrains width of content*/
     max-width: 600px;
@@ -52,4 +62,9 @@ textarea {
 }
 .delete-alert {
     color: red;
+}
+.ad-image{
+    display: block;
+    margin: auto;
+    /*width: 40%;*/
 }

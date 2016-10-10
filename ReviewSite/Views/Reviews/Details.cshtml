@@ -10,17 +10,17 @@
     <hr />
 
     <p>
-        <strong>@Html.DisplayNameFor(model => model.Rating):</strong> @Html.DisplayFor(model => model.Rating)
+        <strong>@Html.DisplayNameFor(model => model.Rating):</strong>
+        @*  Print * for rating points *@
+        @{
+            for (int i = 1; i <= Model.Rating; i++)
+            {
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                }
+            }
         <span class="date"><strong>@Html.DisplayNameFor(model => model.Category.Name):</strong>  @Html.DisplayFor(model => model.Category.Name)</span>
     </p>
 
-    @* Attempting to print * for rating points
-        @{
-        for (int i = 1; i <= Model.Rating; i++)
-        {
-        <p>* </p>
-        }
-    }*@
     <p>
         <strong>@Html.DisplayNameFor(model => model.VisitDate):</strong>
         @Html.DisplayFor(model => model.VisitDate)

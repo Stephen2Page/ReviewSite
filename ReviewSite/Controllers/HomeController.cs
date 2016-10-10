@@ -15,7 +15,7 @@ namespace ReviewSite.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Modifications made to basic layout.";
 
             return View();
         }
